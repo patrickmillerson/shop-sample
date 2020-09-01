@@ -1,0 +1,13 @@
+.conta {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+body {
+    margin-right: 0px !important;
+}
+
+.jumbotron {
+    background: url('https://www2.deloitte.com/content/dam/Deloitte/nl/Images/header_images/deloitte-nl-consumer-products-industry-outlook-2020-banner.jpg');
+    background-size: 100% 100%;
+}
