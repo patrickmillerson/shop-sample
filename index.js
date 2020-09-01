@@ -69,6 +69,7 @@ function setCards(obj) {
 
 function deleteAllCard() {
     delete localStorage.cards;
+    location.reload();
 }
 
 function deleteProduct(id) {
