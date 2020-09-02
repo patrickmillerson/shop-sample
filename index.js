@@ -38,7 +38,7 @@ function getCardsData() {
           <h5 class="card-title">${cards[i].product_name}</h5>
           <p class="card-text">${cards[i].product_description}.</p>
           <p class="card-text">$${cards[i].product_price}</p>
-          <a href="#" class="btn btn-danger" onclick="deleteProduct(${cards[i].id})">Delete this product</a>
+          <a href="#" class="btn btn-danger" onclick="deleteProduct(${i} ,${cards[i].id})">Delete this product</a>
         </div>
         </div>
         `);
@@ -72,8 +72,15 @@ function deleteAllCard() {
     location.reload();
 }
 
-function deleteProduct(id) {
+function deleteProduct(index, id) {
     let products = JSON.parse(localStorage.getItem("cards"));
+    for (var i = 0; i < products.length; i++) {
+        if (products[i].id == id) {
+            products.splice(i, 1);
+            setCards(products);
+        }
+    }
+    location.reload();
 
 }
 
