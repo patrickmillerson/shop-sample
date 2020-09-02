@@ -38,6 +38,7 @@ function getCardsData() {
           <h5 class="card-title">${cards[i].product_name}</h5>
           <p class="card-text">${cards[i].product_description}.</p>
           <p class="card-text">$${cards[i].product_price}</p>
+          <p><small>Product ID: ${cards[i].id}</small></p>
           <a href="#" class="btn btn-danger" onclick="deleteProduct(${i} ,${cards[i].id})">Delete this product</a>
         </div>
         </div>
